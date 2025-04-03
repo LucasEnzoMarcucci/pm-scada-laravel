@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $stats = Stat::first();
-        $orders = Order::all();
-        return view('home', compact('stats', 'orders'));
-    }
+  public function index()
+  {
+    $stats = Stat::first();
+    $orders = Order::all();
+    return view('dashboard', compact('stats', 'orders'));
+  }
 }
