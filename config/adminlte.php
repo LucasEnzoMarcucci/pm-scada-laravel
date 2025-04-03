@@ -325,12 +325,12 @@ return [
         'period' => 30,                       // The update period for get new data (in seconds, optional).
       ],
     ],
-    [
-      'text' => 'profile',
-      'url' => 'http://my.domain.com/user/profile',
-      'icon' => 'fas fa-fw fa-user',
-      'topnav_right' => true,
-    ],
+    // [
+    //   'text' => 'profile',
+    //   'url' => 'http://my.domain.com/user/profile',
+    //   'icon' => 'fas fa-fw fa-user',
+    //   'topnav_right' => true,
+    // ],
 
     // Sidebar items:
     [
