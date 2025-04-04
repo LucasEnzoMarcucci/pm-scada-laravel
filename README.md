@@ -26,6 +26,7 @@ php artisan db:seed
 php artisan db:seed --class=OrderSeeder
 php artisan db:seed --class=StatSeeder
 php artisan db:seed --class=RecapSeeder
+php artisan db:seed --class=GoalSeeder
 ```
 The last step to finish the setup :
 ```powershell
