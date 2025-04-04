@@ -79,34 +79,41 @@
             </div>
             <div class="col-md-4">
               <p class="text-center"><strong>Goal Completion</strong></p>
-              <div class="progress-group">
-                Add Products to Cart
-                <span class="float-end"><b>160</b>/200</span>
-                <div class="progress progress-sm">
-                  <div class="progress-bar text-bg-primary" style="width: 80%"></div>
-                </div>
-              </div>
-              <div class="progress-group">
-                Complete Purchase
-                <span class="float-end"><b>310</b>/400</span>
-                <div class="progress progress-sm">
-                  <div class="progress-bar text-bg-danger" style="width: 75%"></div>
-                </div>
-              </div>
-              <div class="progress-group">
-                <span class="progress-text">Visit Premium Page</span>
-                <span class="float-end"><b>480</b>/800</span>
-                <div class="progress progress-sm">
-                  <div class="progress-bar text-bg-success" style="width: 60%"></div>
-                </div>
-              </div>
-              <div class="progress-group">
-                Send Inquiries
-                <span class="float-end"><b>250</b>/500</span>
-                <div class="progress progress-sm">
-                  <div class="progress-bar text-bg-warning" style="width: 50%"></div>
-                </div>
-              </div>
+              @isset($goals)
+          <div class="progress-group">
+          Add Products to Cart
+          <span class="float-end"><b>{{ $goals[0]->products_cart }}</b>/200</span>
+          <div class="progress progress-sm">
+            <div class="progress-bar text-bg-primary"
+            style="width: {{ ($goals[0]->products_cart * 100) / 200 }}%">
+            </div>
+          </div>
+          </div>
+          <div class="progress-group">
+          Complete Purchase
+          <span class="float-end"><b>{{ $goals[0]->complete_purchase }}</b>/400</span>
+          <div class="progress progress-sm">
+            <div class="progress-bar text-bg-danger"
+            style="width: {{ ($goals[0]->complete_purchase * 100) / 400 }}%"></div>
+          </div>
+          </div>
+          <div class="progress-group">
+          <span class="progress-text">Visit Premium Page</span>
+          <span class="float-end"><b>{{ $goals[0]->prenium_visits }}</b>/800</span>
+          <div class="progress progress-sm">
+            <div class="progress-bar text-bg-success"
+            style="width: {{ ($goals[0]->prenium_visits * 100) / 800 }}%"></div>
+          </div>
+          </div>
+          <div class="progress-group">
+          Send Inquiries
+          <span class="float-end"><b>{{ $goals[0]->send_inquiries }}</b>/500</span>
+          <div class="progress progress-sm">
+            <div class="progress-bar text-bg-warning"
+            style="width: {{ ($goals[0]->send_inquiries * 100) / 500 }}%"></div>
+          </div>
+          </div>
+        @endisset
             </div>
           </div>
         </div>

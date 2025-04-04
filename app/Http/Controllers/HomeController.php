@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Stat;
 use App\Models\Recap;
 use App\Models\Order;
+use App\Models\Goal;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,6 +30,7 @@ class HomeController extends Controller
     $stats = Stat::first();
     $recaps = Recap::all();
     $orders = Order::all();
-    return view('dashboard', compact('stats', 'recaps', 'orders'));
+    $goals = Goal::all();
+    return view('dashboard', compact('stats', 'recaps', 'orders', 'goals'));
   }
 }
