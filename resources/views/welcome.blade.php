@@ -13,8 +13,9 @@
 
     .main {
       min-height: 100vh;
-      ;
+      font-family: system-ui;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -23,7 +24,9 @@
 
 <body>
   <div class="main">
-    HOME PAGE available for non authenticated users
+    <h2>HOME PAGE</h2>
+    <p>Available for non authenticated users</p>
+    <p>go to the protected route <a href="/dashboard">dashboard</a></p>
   </div>
 </body>
 
