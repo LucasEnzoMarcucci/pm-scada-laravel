@@ -13,6 +13,6 @@ class RecapSeeder extends Seeder
    */
   public function run(): void
   {
-    Recap::factory()->count(1)->create();
+    Recap::factory()->count(2)->create();
   }
 }
